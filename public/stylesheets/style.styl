@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'jos';
+    src: url('font/josefinslab/JosefinSlab-Semibold.eot');
+    src: url('font/josefinslab/josefinslab-semibold-webfont.woff2') format('woff2'), url('font/josefinslab/josefinslab-semibold-webfont.woff') format('woff'), url('font/josefinslab/josefinslab-semibold-webfont.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*
+  margin: 0
+  padding: 0
+body
+  min-height: 100%
+  min-width: 100%
+  width: 100vw
+  height: 100vh
+  font-family: 'jos'
+//Dimensiones
+w=100vw
+h=100vh
+h1=0.2*(h)
+//dimpos(width,height,left,top)
+dimpos(w,h,l,t)
+  width: w
+  height: h
+  left: l
+  top: t
+//Contenedores Dim Pos
+#cont1
+  position: relative;
+  dimpos inherit,h1,0,0
+  z-index : 1;
+
+#cont1:before
+  content : "";
+  position: absolute;
+  dimpos 80%,0,null,null
+  right: 0
+  bottom:0
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  border-bottom: 0.5vh solid white
+  z-index: -1
+body:before
+  content : "";
+  position: absolute;
+  dimpos 100%,0,0,null
+  top:0
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  border-top: 3vh solid rgba(0,51,153,0.4i)
+  z-index: -1
+.cont1{
+  float:left
+}
+#cont2
+  dimpos inherit,((h)-(h1)),0,0
+//Contenedores Dis
+//cont1
+#cont1
+  h1
+    font-size: .9*h1
+    padding-left: 5%
+  h2
+    font-size:.25*h1
+#cont11
+  dimpos(45%,100%,0,0)
+  background-image: url("../images/ingastec.svg")
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center
+  padding-top: 1%
+#cont12
+  width: 55%
+  height: 100%
+//cont2
+#cont12
+  & nav
+    position: relative;
+    background-color: red
+    width: 80%
+    height: 50%
+    top:3vh
+    left:5%
+    font-size: 4vh
+    text-transform: uppercase;
+    list-style-type: none;
+    & li
+      display: inline;
+      margin-left: 5%
+      vertical-align: middle;
+      & a
+        color:inherit;
+        text-decoration: none
+        transition: all 1s;
+      & a:hover
+        font-style: italic;
+  & nav:hover
+    & li:not(:hover)
+      & a:not(:hover)
+        color rgba(255,255,255,0.1)
+#cont2
+  background-image: url("../images/patron.png")
+  background-color: rgba(200,200,200,0.4);
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center
+  background-attachment: fixed;
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  border-bottom: 2vh solid rgba(0,51,153,0.4)

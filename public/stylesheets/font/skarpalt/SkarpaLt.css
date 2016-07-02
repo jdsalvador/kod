@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SkarpaLt';
+    src: url('fonts/SkarpaLt.eot');
+    src: url('fonts/SkarpaLt.eot') format('embedded-opentype'),
+         url('fonts/SkarpaLt.woff2') format('woff2'),
+         url('fonts/SkarpaLt.woff') format('woff'),
+         url('fonts/SkarpaLt.ttf') format('truetype'),
+         url('fonts/SkarpaLt.svg#SkarpaLt') format('svg');
+}

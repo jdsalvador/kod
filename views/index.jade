@@ -1,0 +1,15 @@
+extends layout
+
+block content0
+  section#cont1
+    block content1
+    div#cont11.cont1
+    div#cont12.cont1
+      nav
+        each key,val in ['inicio','servicios','contacto']
+          li
+            a(href=val+key.slice(0,4))= key
+  section#cont2
+    block content2
+    div#cont21
+    
